@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/icon" href="assets/img/logo.ico"/>
+    <title>Corona Virus Analysis</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body class="sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+        <div class="container">
+        <a href="index.html" class="navbar-brand">
+        <i class="fa fa-globe" aria-hidden="true" ></i> Covid Analysis </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="map.html" class="nav-link active">
+                    <i class="fa fa-map"></i> Map </a>
+            </li>
+            <li class="nav-item">
+                <a href="dashboard.html" class="nav-link active">
+                    <i class="fa fa-map"></i> Data </a>
+            </li>
+            <li class="nav-item">
+                <a href="feed.html" class="nav-link active">
+                    <i class="fa fa-twitter"></i> Tweets </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <div class="content-wrapper" >
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+    <div class="space-25"></div>
+    <hr style="background-color:beige">
+        <!-- Area Chart Example-->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-area-chart"></i> Area Chart</div>
+          <div class="card-body">
+            <canvas id="myAreaChart" width="100%" height="30"></canvas>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Example Bar Chart Card-->
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fa fa-bar-chart"></i> Bar Chart</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-8 my-auto">
+                    <canvas id="myBarChart" width="100" height="50"></canvas>
+                  </div>
+                  <div class="col-sm-4 text-center my-auto">
+                    <div class="h4 mb-0 text-primary">1st</div>
+                    <div class="small text-muted">USA</div>
+                    <hr>
+                    <div class="h4 mb-0 text-warning">2nd</div>
+                    <div class="small text-muted">India</div>
+                    <hr>
+                    <div class="h4 mb-0 text-success">3rd</div>
+                    <div class="small text-muted">Brazil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+            </div>
+          <div class="col-lg-4">
+            <!-- Example Pie Chart Card-->
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fa fa-pie-chart"></i> Pie Chart </div>
+              <div class="card-body">
+                <canvas id="myPieChart" width="100%" height="100"></canvas>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+           </div>
+           </div>
+        <!--  DataTables -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> Country wise Stats</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+      </div>
+      <!-- /table-->
+      <!--footer-->
+      <div class="container">
+        <div class="space-10"></div>
+        <footer class="sticky-footer">
+          <div class="col-12 text-center">
+            <small>Made by the_crazy_guys: Abhinav, HariHaran, Ayushi, Shreshta, Manikanta</small>
+          </div>
+        
+      </footer>
+      </div>
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    <script type="text/javascript" src="assets/main.js"></script>    
+  </body>
+  
+</html>

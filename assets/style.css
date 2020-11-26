@@ -1,0 +1,234 @@
+  html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+    overflow-x: hidden;
+  }
+ 
+#heading .h1 {
+  position: absolute;
+  font-family: 'Oswald';
+  font-weight: 20vw;
+  width: 100vw;
+  text-align: center;
+  z-index: 0;
+  text-transform: uppercase;
+  color: lightcoral;
+  font-size: 10vmin;
+  margin: 0;
+
+  }
+  /* Header/Blog Title 
+  .header {
+    padding: 1px;
+    font-size: 50px;
+    text-align: center;
+    background: #063019;
+    text-emphasis-color: black;
+    color: white;
+  }
+  
+ Create two unequal columns that floats next to each other */
+  /* Left column 
+  .leftcolumn {
+    float: left;
+    width: 100%;
+  }
+  
+  /* Right column 
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+
+  }
+  
+  /* Fake image 
+  .fakeimg {
+    background-color: aquamarine;
+    width: 90%;
+    padding: 5px;
+    align-items: center;
+  }*/
+  
+  /* Add a card effect for articles */
+  #news-feed .card {
+    background-color: #ffffff;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+
+  }
+  
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other 
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  /*common*/
+
+  .space-10{
+    height: 10px;
+  }
+
+  .space-25{
+    height: 25px;
+  }
+  
+   .space-20{
+    height: 20px;
+  }
+  
+  /*dashboard*/
+
+  body.sticky-footer {
+  margin-bottom: 56px;
+}
+
+body.sticky-footer .content-wrapper {
+  min-height: calc(100vh - 56px - 56px);
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 56px);
+  padding-top: 1rem;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 3px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px;
+}
+
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+
+.scroll-to-top:hover {
+  background: #343a40;
+}
+
+.scroll-to-top i {
+  font-weight: 800;
+}
+
+.smaller {
+  font-size: 0.7rem;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: -25px;
+  right: -25px;
+  font-size: 5rem;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+/*footer*/
+
+footer.sticky-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #e9ecef;
+  line-height: 55px;
+}
+/*---Landing page----*/
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #00000;
+}
+
+$particleSize: 20vmin;
+$animationDuration: 6s;
+$amount: 20;
+.background span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+    #583C87,
+    #E45A84,
+    #FFACAC
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
