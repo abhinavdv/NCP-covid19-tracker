@@ -1,5 +1,49 @@
 // Chart.js scripts
 // -- Set new default font family and font color to mimic Bootstrap's default styling
+const api_url = "https://coronavirus-19-api.herokuapp.com/countries"
+async function getapi(url,ele) { 
+	
+  // Storing response 
+  const response = await fetch(url); 
+
+  // Storing data in form of JSON 
+  var data = await response.json(); 
+  if (response) { 
+  } 
+  show(data,ele);
+  return data;
+} // Calling that async function 
+var dt= new Array();
+var ele = document.getElementById("datatable");
+dt = getapi(api_url,ele); 
+console.log(dt)
+// Function to define innerHTML for HTML table 
+function show(data, ele) { 
+  let tab = 
+    `<tr> 
+    <th>Country</th> 
+    <th>Cases</th> 
+    <th>Deaths</th> 
+    <th>Recovered</th>
+    <th>Active</th>
+    </tr>`; 
+
+    for (var i=0; i <data.length; i++){
+      var obj=data[i];
+      tab += `<tr> 
+      <td>${obj.country} </td> 
+      <td>${obj.cases}</td>
+      <td>${obj.deaths} </td> 
+      <td>${obj.recovered}</td>
+      <td>${obj.active} </td> 
+    </tr>`;
+    }
+
+  // Loop to access all rows 
+  // Setting innerHTML as tab variable 
+  ele.innerHTML = tab; 
+}
+
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#292b2c';
 // -- Area Chart 
