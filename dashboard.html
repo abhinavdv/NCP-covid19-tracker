@@ -52,15 +52,42 @@
         <!-- Area Chart Example-->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fa fa-area-chart"></i> Area Chart</div>
-          <div class="card-body">
-            <canvas id="myAreaChart" width="100%" height="30"></canvas>
-          </div>
+            <i class="fa fa-area-chart"></i> World stats</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-5 my-auto">
+                  <div class="h1" style="font-size: 8.0rem;font-weight: bolder;color:#343a40">World</div>
+                </div>
+                <div class="col-sm-2 my-auto text-center">
+                  <div class="h4 mb-0 " style="color:green"><b>Recovered</b></div> 
+                  <div class="h4 mb-0 " style="color:green"><h5>64717139</h5></div><br>
+                  <div class="h4 mb-0 " style="color:red"><b>Deaths</b> </div>
+                  <div class="h4 mb-0 " style="color:red"><h5>1496670</h5></div>
+                </div>
+                <div class="col-sm-2 text-center my-auto">
+                  <div class="h4 mb-0 " style="color: Blue"><b>Active</b> </div>
+                  <div class="h4 mb-0 " style="color: Blue"> <h5>18412201</h5></div><br>
+                  <div class="h4 mb-0  " style="color: Blue"><b>Cases</b></div>
+                  <div class="h4 mb-0  " style="color: Blue"> <h5>64721026</h5></div>
+              </div>
+              <div class="col-sm-2 text-center my-auto">
+                <div class="h4 mb-0 text-warning"><b>Today Cases</b></div>
+                <div class="h4 mb-0 text-warning"><h5>532615</h5></div><br>
+                <div class="h4 mb-0" style="color:red"><b>Today Deaths<b></div>
+                  <div class="h4 mb-0" style="color:red"></h5>10676</h5></div>
+            </div>
+            </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
         <div class="row">
           <div class="col-lg-8">
-            <!-- Example Bar Chart Card-->
+            <!-- Example Bar Chart Card"country": "World",
+        "cases": 64721026,
+        "todayCases": 532615,
+        "deaths": 1496670,
+        "todayDeaths": 10676,
+        "recovered": 44808434,
+        "active": 18415922,-->
             <div class="card mb-3">
               <div class="card-header">
                 <i class="fa fa-bar-chart"></i> Bar Chart</div>
