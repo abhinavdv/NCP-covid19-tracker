@@ -58,7 +58,7 @@ body {
   
   /* Add a card effect for articles */
   #news-feed .card {
-    background-color: #ffffff;
+    background-color: #343A40;
     color: black;
     padding: 20px;
     margin-top: 20px;

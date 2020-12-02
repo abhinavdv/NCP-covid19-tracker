@@ -1,142 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/icon" href="assets/img/logo.ico"/>
-    <title>Corona Virus Analysis</title>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/icon" href="assets/img/logo.ico" />
+  <title>Corona Virus Analysis</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="assets/style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body class="bg-dark" id="page-top">
   <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
-        <div class="container">
-        <a href="index.html" class="navbar-brand">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
         <i class="fa fa-globe" aria-hidden="true"></i> Covid Analysis </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
 
-        <div id="navbarCollapse" class="collapse navbar-collapse">
+      <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="map.html" class="nav-link active">
-                    <i class="fa fa-map"></i> Map </a>
-            </li>
-            <li class="nav-item">
-                <a href="dashboard.html" class="nav-link active">
-                    <i class="fa fa-map"></i> Data </a>
-            </li>
-            <li class="nav-item">
-                <a href="feed.html" class="nav-link active">
-                    <i class="fa fa-twitter"></i> Tweets </a>
-            </li>
+          <li class="nav-item">
+            <a href="map.html" class="nav-link active">
+              <i class="fa fa-map-marker"></i> Map </a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link active">
+              <i class="fa fa-map"></i> Data </a>
+          </li>
+          <li class="nav-item">
+            <a href="feed.html" class="nav-link active">
+              <i class="fa fa-newspaper-o"></i> News-feed </a>
+          </li>
         </ul>
-        </div>
+      </div>
     </div>
-    </nav>
-    <div class="content-wrapper" id=news-feed>
-    <div class="col-12" >
+  </nav>
+  <div class="content-wrapper" id=news-feed>
+    <div class="col-12">
       <div class="space-25"></div>
       <hr style="background-color: bisque">
-        <h4 style="color:beige">Top Covid19 news</h4>
-      </div>
-      
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="row no-gutters align-items-center">
-              <div class="col-sm-7">
-                <div class="card-body">
-                  <h2 >Alex Berenson - Twitter</h2>
-                  <h5 class="card-title" style="color: darkseagreen">@AlexBerenson, Oct ,14 2020</h5>
-                  <p class="card-text" >Overdoses appear to be up hugely nationally - 20-40 percent is a reasonable guess based on the states and cities that have reported. But although we obsessively count #Covid deaths, we don’t bother to count overdoses for months, so we really have no idea.
-                  </p>
-                </div>
-              </div>
-            <div class="col-sm-5">
-              <img class="card-img" src="assets/img/COVID19-Image-1.jpg" >
-            </div>
-          </div>
-          </div>        
-          <div class="card">
-            <div class="row no-gutters align-items-center">
-              <div class="col-sm-7">
-                <div class="card-body">
-                  <h2 >David Paton - Twitter</h2>
-                  <h5 class="card-title" style="color: darkseagreen">@cricketwyvern, Oct 14, 2020</h5>
-                  <p class="card-text" >Updates to various Covid-19 indicators.<br>
-                Similar pattern to yesterday: all indicators up except NHS triage. 
-                New positive tests by specimen date up by just 1% (at 9th Oct), slowest increase for over 20 days.
-                  </p>
-                </div>
-              </div>
-            <div class="col-sm-5">
-              <img class="card-img" src="assets/img/COVID19-Image-2.jpg" >
-            </div>
-          </div>
-            
-          </div>
-          <div class="card">
-            <div class="row no-gutters align-items-center">
-              <div class="col-sm-7">
-                <div class="card-body">
-                  <h2 >TITLE HEADING</h2>
-                  <h5 class="card-title" style="color: darkseagreen">@handle, date</h5>
-                  <p class="card-text" >loerjenravw eb
-                  </p>
-                </div>
-              </div>
-            <div class="col-sm-5">
-              <img class="card-img" src="assets/img/COVID19-Image-1.jpg" >
-            </div>
-          </div>
-            
-          </div>
-          <div class="card">
-            <div class="row no-gutters align-items-center">
-              <div class="col-sm-7">
-                <div class="card-body">
-                  <h2 >TITLE HEADING</h2>
-                  <h5 class="card-title" style="color: darkseagreen">@handle, date</h5>
-                  <p class="card-text" >loerjenravw eb
-                  </p>
-                </div>
-              </div>
-            <div class="col-sm-5">
-              <img class="card-img" src="assets/img/COVID19-Image-2.jpg" >
-            </div>
-          </div>
-            
-          </div>  
-          <div class="space-20"></div>
-          <hr>
-        </div>
-        </div>
-      
-      <!--footer-->
-      <div class="container-map">
-        
-        <footer class="sticky-footer">
-          <div class="col-12 text-center">
-            <small>Made by the_crazy_guys: Abhinav, HariHaran, Ayushi, Shreshta, Manikanta</small>
-          </div>
-        
-      </footer>
-      </div>
-      <!-- Scroll to Top Button-->
-      <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-chevron-up"></i>
-      </a>
+      <h4 style="color:beige">Top Covid19 news</h4>
     </div>
-    <script type="text/javascript" src="assets/main.js"></script>
 
+    <div class="row">
+      <div class="col-12">
+
+
+
+        <div class="card" id="newsAccordian" style="background-color:neige;" >
+          <h1 style="color: beige;">PLEASE WAIT PAGE IS LOADING.......</h1>
+          
+        </div>
+
+
+
+
+        <div class="space-20"></div>
+        <hr>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="container-map">
+
+      <footer class="sticky-footer">
+        <div class="col-12 text-center">
+          <small>Made by the_crazy_guys: Abhinav, HariHaran, Ayushi, Shreshta, Manikanta</small>
+        </div>
+
+      </footer>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
+  <script type="text/javascript" src="assets/main.js"></script>
+  <script src="assets/feed.js"></script>
 </body>
+
 </html>
