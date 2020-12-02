@@ -42,12 +42,12 @@ xhr.addEventListener("readystatechange", function () {
         let newsHtml = "";
         articles.forEach(function(element) {
         console.log(element);
-        let news = `<div class="card" id="newsAccordian" style="background-color: bisque">
+        let news = `<div class="card" id="newsAccordian" style="background-color: white">
         <div class="row no-gutters align-items-center" >
             <div class="col-sm-12" >
                 <div class="card-body">
                     <h2>${element.title}</h2>
-                    <h5 class="card-title" style="color: darkseagreen"> ${element.datePublished} </h5>
+                    <h5 class="card-title" style="color: green"> ${element.datePublished} </h5>
                     <h5 class="card-title" style="color: black">Provider: <a href="${element.url}" >${element.provider.name}</a></h5>
 
                     <p class="card-text">
